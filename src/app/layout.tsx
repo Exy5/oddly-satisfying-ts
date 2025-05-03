@@ -27,8 +27,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <div style={{ display: "flex" }}>
-          <main style={{flex: 1}}>
+        <div>
+          <main>
             {children}
           </main>
         </div>

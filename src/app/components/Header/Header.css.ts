@@ -3,7 +3,6 @@ import { style } from '@vanilla-extract/css';
 export const HeaderMainContentStyle = style( {
   background: 'rgb(60, 60, 60)',
   minHeight: '4.4rem',
-  maxWidth: '1980px',
   position: 'relative',
   boxSizing: 'border-box',
   margin: '0.8rem',
@@ -26,7 +25,9 @@ export const  HeaderLogoContainerStyle = style({
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'cnter',
-  padding: '0.6rem 1rem'
+  padding: '0.6rem 1rem',
+  borderTopLeftRadius: '10px',
+  borderBottomLeftRadius: '10px',
 })
 
 

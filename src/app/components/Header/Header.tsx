@@ -30,8 +30,8 @@ const Header = () => {
         </div>
         <div className={HeaderMenuStyle}>
           <Link className={HeaderMenuItemStyle} href="/">HOME</Link>
-          <Link className={HeaderMenuItemStyle} href="/Guides">GUIDES</Link>
-          <Link className={HeaderMenuItemStyle} href="/About">ABOUT US</Link>
+          <Link className={HeaderMenuItemStyle} href="/guides">GUIDES</Link>
+          <Link className={HeaderMenuItemStyle} href="/about">ABOUT US</Link>
         </div>
         <a href="https://discord.gg/9aWhDBRBYS" target="_blank" className={discordLinkStyle}>
           <Image src={DiscordLogo} alt="discord" className={discordLogoStyle} />
