@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const HeaderMainContentStyle = style( {
+export const HeaderMainContentStyle = style({
   background: 'rgb(60, 60, 60)',
   minHeight: '4.4rem',
   position: 'relative',
@@ -16,9 +16,8 @@ export const HeaderStyle = style({
   width: '100%',
   zIndex: '10',
   boxSizing: 'border-box',
-  padding: '0 2rem'
-
-})
+  padding: '0 2rem',  // horizontal padding 2rem
+});
 
 export const  HeaderLogoContainerStyle = style({
   background: 'linear-gradient(to right,rgb(30,30,30), rgb(60,60,60))',

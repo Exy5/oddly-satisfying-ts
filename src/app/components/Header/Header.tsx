@@ -24,7 +24,7 @@ const Header = () => {
               src={OddlySatisfyingLogo}
               className={HeaderLogoStyle}
               alt="oddly-satisfying logo with dragon"
-                
+              priority
             />
           </Link>	
         </div>
