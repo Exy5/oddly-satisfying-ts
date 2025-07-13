@@ -8,6 +8,7 @@ export const HeaderMainContentStyle = style({
   margin: '0.8rem',
   display: 'flex',
   borderRadius: '10px',
+  border: '1px solid black',
 });
 
 export const HeaderStyle = style({
@@ -17,16 +18,18 @@ export const HeaderStyle = style({
   zIndex: '10',
   boxSizing: 'border-box',
   padding: '0 2rem',  // horizontal padding 2rem
+  
 });
 
 export const  HeaderLogoContainerStyle = style({
   background: 'linear-gradient(to right,rgb(30,30,30), rgb(60,60,60))',
   alignItems: 'center',
   display: 'flex',
-  justifyContent: 'cnter',
+  justifyContent: 'center',
   padding: '0.6rem 1rem',
   borderTopLeftRadius: '10px',
   borderBottomLeftRadius: '10px',
+  
 })
 
 

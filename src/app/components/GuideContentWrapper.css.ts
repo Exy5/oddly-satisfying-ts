@@ -10,4 +10,5 @@ export const GuideContentWrapper = style({
   padding: '1rem',                   // add some padding inside for your content spacing
   display: 'flex',
   flexDirection: 'column',           // if you want vertical stacking inside
+  border: '1px solid black',
 });
