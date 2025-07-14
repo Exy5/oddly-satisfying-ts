@@ -7,7 +7,7 @@ export const videoContainer = style({
   minWidth: '100%',
   height: '80%',     // You control height here
   overflow: 'hidden',  // Hide any overflow
-  margin: '2rem auto', // Center horizontally
+  margin: 'auto', // Center horizontally
   borderRadius: '1rem',
   zIndex: -1,
 });

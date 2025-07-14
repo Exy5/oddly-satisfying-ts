@@ -2,8 +2,8 @@
 'use client';
 
 import React from 'react';
-import { GuideContentWrapper } from './GuideContentWrapper.css';
-import BackgroundVideo from './Video/BackgroundVideo';
+import { GuideContentWrapper } from '@/app/components/Guides/GuideContent/GuideContentWrapper.css';
+import BackgroundVideo from '../../Video/BackgroundVideo';
 
 export default function GuideContent({ content }: { content: React.ReactNode }) {
   return  (

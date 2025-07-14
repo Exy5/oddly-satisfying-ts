@@ -4,10 +4,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { components } from '@/app/components/mdxComponents';
-import GuideContent from '@/app/components/GuideContent';
+import GuideContent from '@/app/components/Guides/GuideContent/GuideContent';
 
-export default async function BossGuidePage({ params }: { params: { raid: string; boss: string } }) {
-  const filePath = path.join(process.cwd(), 'src', 'content', params.raid, `${params.boss}.mdx`);
+export default async function BossGuidePage({ params }: { params: Promise<{ raid: string; boss: string }> }) {
+  const { raid, boss } = await params;
+  const filePath = path.join(process.cwd(), 'src', 'content', raid, `${boss}.mdx`);
   const source = await fs.readFile(filePath, 'utf8');
 
   const { content } = await compileMDX({
@@ -15,5 +16,7 @@ export default async function BossGuidePage({ params }: { params: { raid: string
     components,
   });
 
-  return <GuideContent content={content} />;
+  return (
+    <GuideContent content={content} />
+  );
 }
