@@ -1,9 +1,9 @@
 
-import Link from "next/link";
-import BackgroundVideo from "../components/Video/BackgroundVideo";
 import fs from 'fs/promises';
 import path from 'path';
-
+import BackgroundVideo from '../components/Video/BackgroundVideo';
+import { guideContentContainer } from '../components/Guides/GuideContent/GuideContent.css';
+import Link from 'next/link';
 
 export default async function GuidesHome() {
   // Dynamically read raids and bosses from the filesystem
@@ -14,7 +14,6 @@ export default async function GuidesHome() {
       .filter((dirent) => dirent.isDirectory())
       .map(async (dirent) => {
         const raidId = dirent.name;
-        // Try to get a readable name from the folder, fallback to id
         const raidName = raidId
           .split('-')
           .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
@@ -25,7 +24,6 @@ export default async function GuidesHome() {
           .filter((file) => file.endsWith('.mdx'))
           .map((file) => {
             const bossId = file.replace(/\.mdx$/, '');
-            // Try to get a readable name from the file, fallback to id
             const bossName = bossId
               .split('-')
               .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
@@ -35,48 +33,50 @@ export default async function GuidesHome() {
         return { id: raidId, name: raidName, bosses };
       })
   );
-
   return (
     <>
       <BackgroundVideo />
-      <div
-        style={{
-          maxWidth: '56rem',
-          margin: '0 auto',
-          padding: '2.5rem 2rem 2rem 2rem',
-          background: 'rgb(60, 60, 60)',
-          borderRadius: '10px',
-          border: '1px solid black',
-          marginTop: '6.2rem', // header height (4.4rem) + margin (0.8rem) + some extra
-          boxShadow: '0 2px 16px 0 rgba(0,0,0,0.18)',
-        }}
-      >
-        <h1 style={{ color: '#fff', fontSize: '2.2rem', fontWeight: 700, marginBottom: '2rem', letterSpacing: '0.02em', textShadow: '0 2px 8px #222' }}>
-          Raid Guides
-        </h1>
-        {raids.map((raid) => (
-          <div key={raid.id} style={{ marginBottom: '2.5rem' }}>
-            <h2 style={{ color: '#4FC3F7', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.7rem', letterSpacing: '0.01em' }}>{raid.name}</h2>
+      <div className={guideContentContainer}>
+        <div
+          style={{
+            maxWidth: '900px',
+            width: '100%',
+            margin: '6.2rem auto 0 auto',
+            padding: '2.2rem 2.5rem',
+            background: 'linear-gradient(120deg, var(--color-bg-alt, #23272f) 60%, var(--color-surface-alt, #282c34) 100%)',
+            borderRadius: '1.2rem',
+            border: '1.5px solid var(--color-border, #31343c)',
+            boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)',
+            color: 'var(--color-text, #f5f6fa)',
+          }}
+        >
+          <h1 style={{ color: '#fff', fontSize: '2.2rem', fontWeight: 700, marginBottom: '2rem', letterSpacing: '0.02em', textShadow: '0 2px 8px #222' }}>
+            Raid Guides
+          </h1>
+          {raids.map((raid) => (
+            <div key={raid.id} style={{ marginBottom: '2.5rem' }}>
+              <h2 style={{ color: '#4FC3F7', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.7rem', letterSpacing: '0.01em' }}>{raid.name}</h2>
+              <ul style={{ listStyle: 'disc', paddingLeft: '2rem' }}>
+                {raid.bosses.map((boss) => (
+                  <li key={boss.id} style={{ marginBottom: '0.4rem' }}>
+                    <Link style={{ color: '#fff', textDecoration: 'underline', fontWeight: 500, transition: 'color 0.2s' }} href={`/guides/${raid.id}/${boss.id}`}>
+                      {boss.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h2 style={{ color: '#4FC3F7', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.7rem', letterSpacing: '0.01em' }}>Component Showcase</h2>
             <ul style={{ listStyle: 'disc', paddingLeft: '2rem' }}>
-              {raid.bosses.map((boss) => (
-                <li key={boss.id} style={{ marginBottom: '0.4rem' }}>
-                  <Link style={{ color: '#fff', textDecoration: 'underline', fontWeight: 500, transition: 'color 0.2s' }} href={`/guides/${raid.id}/${boss.id}`}>
-                    {boss.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link style={{ color: '#fff', textDecoration: 'underline', fontWeight: 500, transition: 'color 0.2s' }} href="/guides/test/test-all-components">
+                  All Guide Components (test-all-components)
+                </Link>
+              </li>
             </ul>
           </div>
-        ))}
-        <div style={{ marginBottom: '2.5rem' }}>
-          <h2 style={{ color: '#4FC3F7', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.7rem', letterSpacing: '0.01em' }}>Component Showcase</h2>
-          <ul style={{ listStyle: 'disc', paddingLeft: '2rem' }}>
-            <li>
-              <Link style={{ color: '#fff', textDecoration: 'underline', fontWeight: 500, transition: 'color 0.2s' }} href="/guides/test/test-all-components">
-                All Guide Components (test-all-components)
-              </Link>
-            </li>
-          </ul>
         </div>
       </div>
     </>

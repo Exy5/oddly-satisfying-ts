@@ -1,14 +1,15 @@
 import { style } from '@vanilla-extract/css';
 
 export const HeaderMainContentStyle = style({
-  background: 'rgb(60, 60, 60)',
+  background: 'linear-gradient(90deg, var(--color-bg-alt, #23272f) 60%, var(--color-surface-alt, #282c34) 100%)',
   minHeight: '4.4rem',
   position: 'relative',
   boxSizing: 'border-box',
-  margin: '0.8rem',
+  margin: '1.2rem',
   display: 'flex',
-  borderRadius: '10px',
-  border: '1px solid black',
+  borderRadius: '1.2rem',
+  border: '1.5px solid var(--color-border, #31343c)',
+  boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)',
 });
 
 export const HeaderStyle = style({
@@ -17,19 +18,18 @@ export const HeaderStyle = style({
   width: '100%',
   zIndex: '10',
   boxSizing: 'border-box',
-  padding: '0 2rem',  // horizontal padding 2rem
-  
+  padding: '0 2.5rem',
+  background: 'transparent',
 });
 
-export const  HeaderLogoContainerStyle = style({
-  background: 'linear-gradient(to right,rgb(30,30,30), rgb(60,60,60))',
+export const HeaderLogoContainerStyle = style({
+  background: 'linear-gradient(90deg, #181a20 60%, #23272f 100%)',
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'center',
-  padding: '0.6rem 1rem',
-  borderTopLeftRadius: '10px',
-  borderBottomLeftRadius: '10px',
-  
+  padding: '0.7rem 1.2rem',
+  borderTopLeftRadius: '1.2rem',
+  borderBottomLeftRadius: '1.2rem',
 })
 
 
@@ -54,20 +54,23 @@ export const HeaderMenuStyle = style({
   display: 'flex',
   width: '60%',
   flexDirection: 'row',
-  marginLeft: '5rem'
+  marginLeft: '5rem',
 })
 
 export const HeaderMenuItemStyle = style({
-  borderRadius: '0.5rem',
-  fontSize: '14px',
-  fontWeight: '500',
-  padding: '0.5rem 1rem',
+  borderRadius: '0.7rem',
+  fontSize: '1rem',
+  fontWeight: '600',
+  padding: '0.6rem 1.3rem',
   textTransform: 'uppercase',
-  transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+  color: 'var(--color-text)',
+  background: 'transparent',
+  transition: 'background 0.2s, color 0.2s, box-shadow 0.2s',
   selectors: {
     '&:hover': {
-      backgroundColor: '#707070', // light grey box on hover
-      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', // soft shadow
+      background: 'var(--color-accent, #4FC3F7)',
+      color: '#181a20',
+      boxShadow: '0 2px 12px 0 rgba(0,0,0,0.12)',
       cursor: 'pointer',
     },
   }

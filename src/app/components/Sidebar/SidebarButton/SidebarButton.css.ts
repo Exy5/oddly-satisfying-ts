@@ -1,16 +1,23 @@
 import { style } from "@vanilla-extract/css";
 
 export const sidebarButtonStyle = style({
-  color: '#fff',  // White text color for links
-  textDecoration: 'none',  // Remove underline from links
-  border: '3px solid #000',
-  borderRadius:'10px',
-  padding: '0.5rem 1rem',  // Padding for each link
-  marginTop: '0.2rem',
-  marginBottom: '0.2rem',
-  display: 'block',  // Make the link fill the entire width of the sidebar
-  minWidth: '100%',  // Ensure the link stretches across the sidebar
+  color: 'var(--color-text, #f5f6fa)',
+  textDecoration: 'none',
+  border: '2px solid var(--color-accent, #4FC3F7)',
+  borderRadius: '0.9rem',
+  padding: '0.7rem 1.2rem',
+  marginTop: '0.3rem',
+  marginBottom: '0.3rem',
+  display: 'block',
+  minWidth: '100%',
+  fontWeight: 600,
+  fontSize: '1rem',
+  background: 'transparent',
+  transition: 'background 0.15s, color 0.15s, border-color 0.15s',
   ':hover': {
-    backgroundColor: '#444',  // Change background on hover
-  }
+    background: 'var(--color-accent, #4FC3F7)',
+    color: '#181a20',
+    borderColor: 'var(--color-wow-blue, #00b4ff)',
+    cursor: 'pointer',
+  },
 });
