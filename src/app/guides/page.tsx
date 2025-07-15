@@ -1,8 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-import BackgroundVideo from '../components/Video/BackgroundVideo';
-// import { guideContentContainer } from '../components/Guides/GuideContent/GuideContent.css';
 import Section from '../components/Guides/Section/Section';
 import BossButton from '../components/Guides/BossButton/BossButton';
 import { raidCard, raidTitle, bossButtonList } from '../components/Guides/BossButton/RaidGuideLayout.css';
@@ -37,7 +35,6 @@ export default async function GuidesHome() {
   );
   return (
     <>
-      <BackgroundVideo />
       <div style={{ margin: '2rem auto', padding: '2rem 3.7rem' }}>
         <div className={raidCard}>
           <h1 className={raidTitle}>Raid Guides</h1>
