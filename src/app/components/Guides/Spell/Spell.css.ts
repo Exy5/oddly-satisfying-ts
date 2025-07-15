@@ -3,10 +3,10 @@ import { style } from '@vanilla-extract/css';
 export const spell = style({
   display: 'flex',
   alignItems: 'center',
-  gap: '1.25rem',
+  gap: '0.25rem',
   width: '100%',
-  maxWidth: '600px',
-  marginBottom: '2rem',
+  maxWidth: '900px',
+  marginBottom: '1rem',
   background: 'linear-gradient(90deg, #23272f 60%, #181a20 100%)',
   color: '#fff',
   borderRadius: '1.1rem',

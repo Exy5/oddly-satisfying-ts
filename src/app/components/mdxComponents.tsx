@@ -7,6 +7,7 @@ import Section from './Guides/Section/Section';
 import SpellContainer from './Guides/SpellContainer/SpellContainer';
 import Spell from './Guides/Spell/Spell';
 import TableOfContents from './Guides/TableOfContents/TableOfContents';
+import Title from './Guides/Title/Title';
 
 export const components: MDXComponents = {
   VideoEmbed,
@@ -16,6 +17,7 @@ export const components: MDXComponents = {
   SpellContainer,
   Spell,
   TableOfContents,
+  Title,
   h1: (props) => <h1 className="text-3xl font-bold my-6" {...props} />,
   h2: (props) => <h2 className="text-2xl font-semibold my-4" {...props} />,
   p: (props) => <p className="mb-4" {...props} />,

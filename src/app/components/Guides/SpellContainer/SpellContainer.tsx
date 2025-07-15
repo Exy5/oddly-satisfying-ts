@@ -1,7 +1,17 @@
 "use client";
-import React from 'react';
-import { spellContainer } from './SpellContainer.css';
+import React, { ReactNode } from 'react';
+import { spellContainer, spellItem } from './SpellContainer.css';
 
-export default function SpellContainer({ children }: { children: React.ReactNode }) {
-  return <div className={spellContainer}>{children}</div>;
+type SpellContainerProps = {
+  children: ReactNode;
+};
+
+export default function SpellContainer({ children }: SpellContainerProps) {
+  return (
+    <div className={spellContainer}>
+      {React.Children.map(children, child => (
+        <div className={spellItem}>{child}</div>
+      ))}
+    </div>
+  );
 }
