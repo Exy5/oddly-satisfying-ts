@@ -8,12 +8,13 @@ export const section = style({
   boxShadow: '0 6px 32px 0 rgba(0,0,0,0.22)',
   border: '1.5px solid var(--color-border)',
   color: 'var(--color-text)',
+  opacity: '98%'
 });
 
 export const sectionTitle = style({
   fontSize: '1.35rem',
   fontWeight: 700,
-  marginBottom: '0.7rem',
+  marginBottom: '1rem',
   color: 'var(--color-accent)',
   letterSpacing: '0.01em',
 });

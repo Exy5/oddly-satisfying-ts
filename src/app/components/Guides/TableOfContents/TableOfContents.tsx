@@ -7,7 +7,35 @@ interface TOCSection {
   title: string;
 }
 
-export default function TableOfContents({ sections, onSectionClick }: { sections: TOCSection[]; onSectionClick?: (id: string) => void }) {
+export default function TableOfContents({ 
+  sections, 
+  onSectionClick, 
+  offset = 110 
+}: { 
+  sections: TOCSection[]; 
+  onSectionClick?: (id: string) => void;
+  offset?: number;
+}) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    
+    if (onSectionClick) {
+      onSectionClick(sectionId);
+    } else {
+      // Default smooth scroll behavior with offset
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   return (
     <nav className={tocNav}>
       <ul className={tocList}>
@@ -15,12 +43,7 @@ export default function TableOfContents({ sections, onSectionClick }: { sections
           <li key={section.id} className={tocItem}>
             <a
               href={`#${section.id}`}
-              onClick={e => {
-                if (onSectionClick) {
-                  e.preventDefault();
-                  onSectionClick(section.id);
-                }
-              }}
+              onClick={e => handleClick(e, section.id)}
               className={tocLink}
             >
               {section.title}

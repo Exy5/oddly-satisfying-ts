@@ -1,3 +1,4 @@
+// headerLink style removed as per user request
 import { style } from '@vanilla-extract/css';
 
 export const HeaderMainContentStyle = style({
@@ -52,7 +53,7 @@ export const HeaderMenuStyle = style({
   alignItems: 'center',
   justifyContent: 'space-around',
   display: 'flex',
-  width: '60%',
+  width: '80%',
   flexDirection: 'row',
   marginLeft: '5rem',
 })
@@ -66,12 +67,14 @@ export const HeaderMenuItemStyle = style({
   color: 'var(--color-text)',
   background: 'transparent',
   transition: 'background 0.2s, color 0.2s, box-shadow 0.2s',
+  textDecoration: 'none',
   selectors: {
     '&:hover': {
       background: 'var(--color-accent, #4FC3F7)',
       color: '#181a20',
       boxShadow: '0 2px 12px 0 rgba(0,0,0,0.12)',
       cursor: 'pointer',
+      textDecoration: 'none',
     },
   }
 })
