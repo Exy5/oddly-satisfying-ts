@@ -6,7 +6,7 @@ export const container = style({
   padding: '1rem',
   border: '1px solid #cbd5e0',
   borderRadius: '8px',
-  backgroundColor: '#f1f5f9',
+  backgroundColor: '#234a72ff',
 });
 
 export const title = style({

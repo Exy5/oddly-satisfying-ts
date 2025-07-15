@@ -1,3 +1,4 @@
+"use client";
 import { videoEmbed } from './VideoEmbed.css';
 
 export default function VideoEmbed({ url }: { url: string }) {
