@@ -39,8 +39,8 @@ export const HeaderLogoStyle = style({
   outline: 0,
   position: 'relative',
   transition: 'all .1s ease-in',
-  maxWidth: '8rem',
-  maxHeight: '3.2rem',
+  width: '8rem',
+  height: '3.2rem',
   filter: 'invert(1)',
   selectors: {
     '&:hover': {

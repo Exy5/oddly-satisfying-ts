@@ -1,7 +1,5 @@
 "use client";
 
-import OddlySatisfyingLogo from "@/assets/logo-reworked-clean.png"
-import DiscordLogo from "@/assets/Discord-Symbol-White.png"
 import Image from "next/image";
 import { 
   HeaderMainContentStyle,
@@ -21,10 +19,12 @@ const Header = () => {
         <div className={HeaderLogoContainerStyle}>
           <Link href="/">
             <Image
-              src={OddlySatisfyingLogo}
+              src="/images/logo-reworked-clean.png"
               className={HeaderLogoStyle}
               alt="oddly-satisfying logo with dragon"
               priority
+              width={128}
+              height={51}
             />
           </Link>	
         </div>
@@ -34,7 +34,7 @@ const Header = () => {
           <Link className={HeaderMenuItemStyle} href="/about">ABOUT US</Link>
         </div>
         <a href="https://discord.gg/9aWhDBRBYS" target="_blank" className={discordLinkStyle}>
-          <Image src={DiscordLogo} alt="discord" className={discordLogoStyle} />
+          <Image src="/images/discord-symbol-white.png" alt="discord" className={discordLogoStyle} width={32} height={32} />
         </a>
       </div>
     </header>
