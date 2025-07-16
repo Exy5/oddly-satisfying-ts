@@ -22,5 +22,7 @@ export default async function BossGuidePage({ params }: { params: { raid: string
     source,
     components,
   });
-  return <GuideContent content={content} />;
+  return (
+    <GuideContent content={content} />
+  );
 }
