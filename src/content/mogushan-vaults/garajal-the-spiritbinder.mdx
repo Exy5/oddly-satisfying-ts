@@ -1,0 +1,72 @@
+<Title>Gara'jal the Spiritbinder</Title>
+
+<TableOfContents title="Table of Contents" sections={[
+  { id: 'intro', title: 'Introduction' },
+  { id: 'video', title: 'Guide' },
+  { id: 'strategy', title: 'Strategy' },
+]} />
+
+<Section id="intro" title="Introduction">
+  Gara'jal the Spiritbinder is the third boss in Mogu'shan Vaults. He consists of different stages, but you can decide on the order of phases depending on which weapon he will pick up.
+</Section>
+
+<Section id="video" title="Video Guide">
+  This will basically be the strategy we are opting for.
+  <VideoEmbed url="https://www.youtube.com/embed/jV5tNFOgA3U?si=yM4g6QBUB3o4FbVR" />
+</Section>
+
+<Section id="strategy" title="Strategy">
+    Gara'jal consists basically of 2 phases. <br/>
+    In the first phase you will go to the *spirit realm*, if you are designated, by standing next to the spirit totem when it dies. <br/>
+    In the second phase, you can't go there anymore, and **all adds** left will keep damaging you in the *living realm*.
+  <Phase title="Phase 1">
+		<Section title="Living Realm">
+			<Phase title="Important spells">
+				<SpellContainer>
+					<Spell title="Spirit Totem" image="/images/mogushan-vaults/feng-the-accursed/arcane-resonance.png">
+						Arcane Explosion on everyone withing **6 yards**. Deals **20k** damage, but **increases the damage by 20k for each nearby player**.
+					</Spell>
+					<Spell title="Arcane Velocity" image="/images/mogushan-vaults/feng-the-accursed/arcane-velocity.png">
+						Deals 70k damage per second, scaling based on how far you are away from the boss.
+					</Spell>
+				</SpellContainer>
+			</Phase>
+   	</Section>
+
+		<Section title="Spirit Realm">
+			<Mechanic title="Kill adds and return before 30 seconds passed">
+				Just kill adds in the spirit realm and assist the tank in the spirit realm with killing the *tiki masks*. <br/>
+				It is important, that you return before 30 seconds passed, else you die. <br />
+				How do you do that? Get healed to 90 or more % hp, if you do that, your **ExtraActionButton** will return you to the *living realm*. <br/>
+			</Mechanic>
+		</Section>
+	</Phase>
+
+
+
+  <Section title="Phase 2 - Spear">
+    <p> Ranges stack in the center of the room. </p>
+
+    <Phase title="Important spells">
+      <SpellContainer>
+        <Spell title="Wildfire Spark" image="/images/mogushan-vaults/feng-the-accursed/wildfire-spark.png">
+          Gives you a debuff. After 5 seconds, drop fire on the ground. **Move to designated position**.
+        </Spell>
+      </SpellContainer>
+    </Phase>
+
+    <Phase title="Mechanic">
+      <Mechanic title="Tank swap at 2 stacks">
+        Same as before, just fire damage this time.
+      </Mechanic>
+      <Mechanic title="Get Fire Debuff - Run to staff position">
+        If you get the debuff **Wildfire Spark**, run to the staff position and drop the debuff there. It will create fire on the ground.
+      </Mechanic>
+      <Mechanic title="Draw Flames - Don't stand in it">
+        Every **30 seconds**, he draws the flame patches on the ground towards him. Melees don't stand between boss and flames. <br/>
+        One he soaks the flames, he does AoE damage every **3 seconds**. <br/>
+        The second time he uses **Draw Flames** - maintank uses **Nullification Barrier** to snuff out the fire before it reaches him.
+      </Mechanic>
+    </Phase>
+  </Section>
+</Section>

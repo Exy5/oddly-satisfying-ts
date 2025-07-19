@@ -19,5 +19,5 @@ export const guideContent = style({
   position: 'relative',
   border: '1.5px solid var(--color-border, #31343c)',
   transition: 'box-shadow 0.2s, border-color 0.2s',
-  opacity: '95%'
+  opacity: '96%'
 });
