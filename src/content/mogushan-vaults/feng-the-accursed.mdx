@@ -1,0 +1,122 @@
+<Title>Feng the Accursed</Title>
+
+<TableOfContents title="Table of Contents" sections={[
+  { id: 'intro', title: 'Introduction' },
+  { id: 'video', title: 'Guide' },
+  { id: 'strategy', title: 'Strategy' },
+]} />
+
+<Section id="intro" title="Introduction">
+  <p>Feng is the second boss in Mogu'shan Vaults. He consists of different stages, but you can decide on the order of phases depending on which weapon he will pick up.</p>
+</Section>
+
+<Section id="video" title="Guide">
+  <p>This will basically be the strategy we are opting for.</p>
+  <VideoEmbed url="https://www.youtube.com/embed/8Y35vdHBkPg?si=QaMpwpA6x2kA8OlX" />
+</Section>
+
+<Section id="strategy" title="Strategy">
+  <p>As for the order of the weapons, we will go for following: **Staff** >> **Spear** >> **Shield** >> **Fist**</p> <br/>
+
+  <Section title="Tank Reminder">
+    <p> As a tank, you have a special task given to you. At the start of the fight, there are 2 crystals you can choose from. The **right** one is for the maintank, the **left** one for the offtank.</p> <br/>
+    <Mechanic title="Shroud of reversal (Left side)">
+      Shrouds your **target** to mimic harmful abilities. Can be used to soak a spell and shoot it back at the boss. Is important for **Phase 4**.
+    </Mechanic>
+    <Mechanic title="Nullification Barrier (Right side)">
+      Use that to nullify the damage from the boss abilities. It is channeled and looks like an AMZ on top of you.
+    </Mechanic>
+  </Section>
+
+  <Section title="Phase 1 - Staff">
+    <Phase title="Important spells">
+      <SpellContainer>
+        <Spell title="Arcane Resonance" image="/images/mogushan-vaults/feng-the-accursed/arcane-resonance.png">
+          Arcane Explosion on everyone withing **6 yards**. Deals **20k** damage, but **increases the damage by 20k for each nearby player**.
+        </Spell>
+        <Spell title="Arcane Velocity" image="/images/mogushan-vaults/feng-the-accursed/arcane-velocity.png">
+          Deals 70k damage per second, scaling based on how far you are away from the boss.
+        </Spell>
+      </SpellContainer>
+    </Phase>
+
+    <Phase title="Mechanics">
+      <Mechanic title="Tank swap at 2 stacks">
+        He stacks a debuff **Arcane Shock** on tanks, tank swap at 2 stacks to reduce damage taken.
+      </Mechanic>
+      <Mechanic title="Get Arcane Resonance - Run out!">
+        If you get the debuff **Arcane Resonance**, you cast Arcane explosions on players withing 6 yds. Spread out. <br/>
+        Since this is closely related to the **channeling AoE damage by** him, just **spread pre-emptively at the end of the channel**, so you don't wipe the raid.
+      </Mechanic>
+      <Mechanic title="Arcane Velocity - Stack on boss!">
+        Around every **30 seconds**, stack on the boss, because he channels AoE damage, which does more damage, the further away you are from him.
+      </Mechanic>
+    </Phase>
+  </Section>
+
+  <Section title="Phase 2 - Spear">
+    <p> Ranges stack in the center of the room. </p>
+
+    <Phase title="Important spells">
+      <SpellContainer>
+        <Spell title="Wildfire Spark" image="/images/mogushan-vaults/feng-the-accursed/wildfire-spark.png">
+          Gives you a debuff. After 5 seconds, drop fire on the ground. **Move to designated position**.
+        </Spell>
+      </SpellContainer>
+    </Phase>
+
+    <Phase title="Mechanic">
+      <Mechanic title="Tank swap at 2 stacks">
+        Same as before, just fire damage this time.
+      </Mechanic>
+      <Mechanic title="Get Fire Debuff - Run to staff position">
+        If you get the debuff **Wildfire Spark**, run to the staff position and drop the debuff there. It will create fire on the ground.
+      </Mechanic>
+      <Mechanic title="Draw Flames - Don't stand in it">
+        Every **30 seconds**, he draws the flame patches on the ground towards him. Melees don't stand between boss and flames. <br/>
+        One he soaks the flames, he does AoE damage every **3 seconds**. <br/>
+        The second time he uses **Draw Flames** - maintank uses **Nullification Barrier** to snuff out the fire before it reaches him.
+      </Mechanic>
+    </Phase>
+  </Section>
+
+  <Section title="Phase 3 - Shield (Heroic only)">
+    <Phase title="Mechanic">
+    <Mechanic title="Tank swap at 2 stacks">
+        Agin, this time just shadow damage.
+      </Mechanic>
+      <Mechanic title="Throw shield at the raid - Run out">
+        Run out of the aoe, raid stacks at one position. Bomb the adds, before they reach the shield.
+        Good spells to use: **Mass-Grip (DK)**, **Binding Shot (Hunter)**, all slows
+      </Mechanic>
+    </Phase>
+  </Section>
+
+  <Section title="Phase 4 - Fists">
+    Before he reaches Phase 4, move him to the opposite side of the room, so it takes longer for him to pick it up. <br/>
+    Positioning-wise, whole raid apart from 1 hunter stands behind boss and in melee range. Hunter stands in the center of the room.
+
+    <Phase title="Important spells">
+      <SpellContainer>
+        <Spell title="Lightning Fists" image="/images/mogushan-vaults/feng-the-accursed/lightning-fists.png">
+          Shoots 3 lightning balls in front of the boss. Hunter should soak it, when offtank has **Shroud of reversal** up.
+        </Spell>
+        <Spell title="Epicenter" image="/images/mogushan-vaults/feng-the-accursed/epicenter.png">
+          150k aoe damage per second. Will be stunned by offtank, or soaked by maintank.
+        </Spell>
+      </SpellContainer>
+    </Phase>
+
+    <Phase title="Mechanic">
+      <Mechanic title="Lightning fists - designated hunter soak, if offtank tells you to">
+        Raid can ignore it. <br/>
+        Hunter should soak it, and offtank has to channel his **Shroud of reversal** spell on him, while doing so. <br/>
+        **Offtank:** keep that spell you have now on your **ExtraActionButton**, so you can stun him, while he casts his other ability.
+      </Mechanic>
+      <Mechanic title="Epicenter - Healers adjust">
+        Can be interrupted by the offtank, if he soaked the **Lightning orb** correctly before. Just throw it on him while he is casting **Epicenter**. <br/>
+        Second cast will be soaked by maintanks **Shroud of Nullification**. And then we go in turns. If someone messes up, just use raid cooldowns.
+      </Mechanic>
+    </Phase>
+  </Section>
+</Section>

@@ -1,9 +1,8 @@
 import { style } from '@vanilla-extract/css';
 
 export const raidCard = style({
-  maxWidth: '900px',
   width: '100%',
-  margin: '8.2rem auto 0 auto',
+  margin: '3rem auto',
   padding: '2.2rem 2.5rem',
   background: 'linear-gradient(120deg, var(--color-bg-alt, #23272f) 60%, var(--color-surface-alt, #282c34) 100%)',
   borderRadius: '1.2rem',

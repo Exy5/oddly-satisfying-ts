@@ -15,7 +15,6 @@ const getBossOrder = (raidId: string, bossId: string): number => {
       'the-spirit-kings': 4,
       'elegon': 5,
       'will-of-the-emperor': 6
-      // Add more bosses for this raid
     },
     'raid-2': {
       'boss-a': 1,
