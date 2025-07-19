@@ -13,7 +13,7 @@ export const guideContent = style({
   borderRadius: '1.2rem',
   boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)',
   padding: '2.2rem 2.5rem',
-  margin: '3.7rem',
+  margin: '4rem',
   width: '100%',
   color: 'var(--color-text, #f5f6fa)',
   position: 'relative',

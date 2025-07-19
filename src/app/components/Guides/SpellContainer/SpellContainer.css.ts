@@ -16,7 +16,7 @@ export const spellContainer = style({
 // Each direct child (spell) gets 3 per row, but wider and same height
 export const spellItem = style({
   flex: '1 1 0',
-  minWidth: '600px', // minimum width for a spell card
+  minWidth: '350px', // minimum width for a spell card
   maxWidth: 'calc(33.333% - 0.5rem)',
   boxSizing: 'border-box',
   display: 'flex',
