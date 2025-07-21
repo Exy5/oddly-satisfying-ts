@@ -12,6 +12,7 @@ export const container = style({
 export const title = style({
   fontSize: '1.25rem',
   fontWeight: 'bold',
+  marginTop: 'auto'
 });
 
 export const imageWrapper = style({

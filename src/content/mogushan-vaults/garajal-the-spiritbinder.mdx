@@ -1,0 +1,71 @@
+<Title>Gara'jal the Spiritbinder</Title>
+
+<TableOfContents title="Table of Contents" sections={[
+  { id: 'intro', title: 'Introduction' },
+  { id: 'video', title: 'Video Guide' },
+  { id: 'strategy', title: 'Strategy' },
+]} />
+
+<Section id="intro" title="Introduction">
+  Gara'jal the Spiritbinder is the third boss in Mogu'shan Vaults. He consists of 2 different phases. One phase is the living/spirit realm phase. The second one is a burst-phase.
+</Section>
+
+<Section id="video" title="Video Guide">
+  This will basically be the strategy we are opting for.
+  <VideoEmbed url="https://www.youtube.com/embed/jV5tNFOgA3U?si=yM4g6QBUB3o4FbVR" />
+</Section>
+
+<Section id="strategy" title="Strategy">
+    Gara'jal consists basically of 2 phases. <br/>
+    In the first phase you will go to the *spirit realm*, if you are designated, by standing next to the spirit totem when it dies. <br/>
+    In the second phase, you can't go there anymore, and **all adds** left will keep damaging you in the *living realm*.
+  <Phase title="Phase 1">
+		<Section title="Living Realm">
+			<Phase title="Important spells">
+				<SpellContainer>
+					<Spell title="Spirit Totem" image="/images/mogushan-vaults/garajal-the-spiritbinder/spirit-totem.png">
+						When killed, will teleport up to 5 people standing close to it into the *spirit realm*.
+					</Spell>
+					<Spell title="Voodoo Dolls" image="/images/mogushan-vaults/garajal-the-spiritbinder/voodoo-doll.png">
+						Will be cast onto 4 players, that are not inside the *spirit realm*. Transmits the damage taken from the tank onto the targeted players as well. If you have the debuff, you **cannot** enter the spirit realm.
+					</Spell>
+				</SpellContainer>
+			</Phase>
+      <Mechanic title="Attack the boss - Heal the tank and Voodo Doll targets">
+        Just burn the boss. Heals need to watch out for the players affected by **Voodoo Dolls**. Tanks should use cooldowns at times to reduce the damage taken.
+      </Mechanic>
+   	</Section>
+
+		<Section title="Spirit Realm"> 
+      <Phase title="Important spells">
+        <SpellContainer>
+          <Spell title="Return Soul" image="/images/mogushan-vaults/garajal-the-spiritbinder/return-soul.png">
+            Is the **ExtraActionButton** ability. Click it before 30 seconds run out.
+          </Spell>
+        </SpellContainer>
+      </Phase>
+      <Mechanic title="Tank Helper">
+        You need to kill 3 **Severer of Souls**. <br />
+        Only 2 can be seen by the others in the realm. The third one only you can see. It is the one **with the red hands**.
+      </Mechanic>
+			<Mechanic title="Kill adds and return before 30 seconds passed">
+				Just kill adds in the spirit realm and assist the tank in the spirit realm with killing the *Severer of Souls*. <br/>
+				It is important, that you return before 30 seconds passed, else you die. <br />
+				**How do you do that?** Get healed to 90 or more % hp, if you do that, your **ExtraActionButton** will return you to the *living realm*. <br/>
+			</Mechanic>
+		</Section>
+	</Phase>
+
+  <Phase title="Phase 2 - 20% Burn phase">
+    <Phase title="Important spells">
+      <SpellContainer>
+        <Spell title="Frenzy" image="/images/mogushan-vaults/garajal-the-spiritbinder/frenzy.png">
+          Increases attack speed by 50% and increases all damage dealt by 25%.
+        </Spell>
+      </SpellContainer>
+    </Phase>
+    <Mechanic title="Burn him">
+      Use your cooldowns and kill him. Tanks rotate cooldowns here to reduce damage taken, so **Voodoo Doll** targets survives.
+    </Mechanic>
+  </Phase>
+</Section>

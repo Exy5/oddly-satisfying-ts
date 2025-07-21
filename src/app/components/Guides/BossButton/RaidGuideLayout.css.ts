@@ -9,6 +9,7 @@ export const raidCard = style({
   border: '1.5px solid var(--color-border, #31343c)',
   boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)',
   color: 'var(--color-text, #f5f6fa)',
+  opacity: '95%'
 });
 
 export const raidTitle = style({

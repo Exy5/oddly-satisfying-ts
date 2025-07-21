@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  background: rgba(18, 20, 24, 0.92); /* semi-transparent to let video show */
+  background: rgba(18, 20, 24, 0.60); /* semi-transparent to let video show */
   color: #f5f6fa;
   min-height: 100vh;
   letter-spacing: 0.01em;
@@ -28,8 +28,6 @@ body {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
