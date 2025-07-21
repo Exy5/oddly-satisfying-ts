@@ -2,12 +2,12 @@
 
 <TableOfContents title="Table of Contents" sections={[
   { id: 'intro', title: 'Introduction' },
-  { id: 'video', title: 'Guide' },
+  { id: 'video', title: 'Video Guide' },
   { id: 'strategy', title: 'Strategy' },
 ]} />
 
 <Section id="intro" title="Introduction">
-  Gara'jal the Spiritbinder is the third boss in Mogu'shan Vaults. He consists of different stages, but you can decide on the order of phases depending on which weapon he will pick up.
+  Gara'jal the Spiritbinder is the third boss in Mogu'shan Vaults. He consists of 2 different phases. One phase is the living/spirit realm phase. The second one is a burst-phase.
 </Section>
 
 <Section id="video" title="Video Guide">
@@ -23,50 +23,49 @@
 		<Section title="Living Realm">
 			<Phase title="Important spells">
 				<SpellContainer>
-					<Spell title="Spirit Totem" image="/images/mogushan-vaults/feng-the-accursed/arcane-resonance.png">
-						Arcane Explosion on everyone withing **6 yards**. Deals **20k** damage, but **increases the damage by 20k for each nearby player**.
+					<Spell title="Spirit Totem" image="/images/mogushan-vaults/garajal-the-spiritbinder/spirit-totem.png">
+						When killed, will teleport up to 5 people standing close to it into the *spirit realm*.
 					</Spell>
-					<Spell title="Arcane Velocity" image="/images/mogushan-vaults/feng-the-accursed/arcane-velocity.png">
-						Deals 70k damage per second, scaling based on how far you are away from the boss.
+					<Spell title="Voodoo Dolls" image="/images/mogushan-vaults/garajal-the-spiritbinder/voodoo-doll.png">
+						Will be cast onto 4 players, that are not inside the *spirit realm*. Transmits the damage taken from the tank onto the targeted players as well. If you have the debuff, you **cannot** enter the spirit realm.
 					</Spell>
 				</SpellContainer>
 			</Phase>
+      <Mechanic title="Attack the boss - Heal the tank and Voodo Doll targets">
+        Just burn the boss. Heals need to watch out for the players affected by **Voodoo Dolls**. Tanks should use cooldowns at times to reduce the damage taken.
+      </Mechanic>
    	</Section>
 
-		<Section title="Spirit Realm">
+		<Section title="Spirit Realm"> 
+      <Phase title="Important spells">
+        <SpellContainer>
+          <Spell title="Return Soul" image="/images/mogushan-vaults/garajal-the-spiritbinder/return-soul.png">
+            Is the **ExtraActionButton** ability. Click it before 30 seconds run out.
+          </Spell>
+        </SpellContainer>
+      </Phase>
+      <Mechanic title="Tank Helper">
+        You need to kill 3 **Severer of Souls**. <br />
+        Only 2 can be seen by the others in the realm. The third one only you can see. It is the one **with the red hands**.
+      </Mechanic>
 			<Mechanic title="Kill adds and return before 30 seconds passed">
-				Just kill adds in the spirit realm and assist the tank in the spirit realm with killing the *tiki masks*. <br/>
+				Just kill adds in the spirit realm and assist the tank in the spirit realm with killing the *Severer of Souls*. <br/>
 				It is important, that you return before 30 seconds passed, else you die. <br />
-				How do you do that? Get healed to 90 or more % hp, if you do that, your **ExtraActionButton** will return you to the *living realm*. <br/>
+				**How do you do that?** Get healed to 90 or more % hp, if you do that, your **ExtraActionButton** will return you to the *living realm*. <br/>
 			</Mechanic>
 		</Section>
 	</Phase>
 
-
-
-  <Section title="Phase 2 - Spear">
-    <p> Ranges stack in the center of the room. </p>
-
+  <Phase title="Phase 2 - 20% Burn phase">
     <Phase title="Important spells">
       <SpellContainer>
-        <Spell title="Wildfire Spark" image="/images/mogushan-vaults/feng-the-accursed/wildfire-spark.png">
-          Gives you a debuff. After 5 seconds, drop fire on the ground. **Move to designated position**.
+        <Spell title="Frenzy" image="/images/mogushan-vaults/garajal-the-spiritbinder/frenzy.png">
+          Increases attack speed by 50% and increases all damage dealt by 25%.
         </Spell>
       </SpellContainer>
     </Phase>
-
-    <Phase title="Mechanic">
-      <Mechanic title="Tank swap at 2 stacks">
-        Same as before, just fire damage this time.
-      </Mechanic>
-      <Mechanic title="Get Fire Debuff - Run to staff position">
-        If you get the debuff **Wildfire Spark**, run to the staff position and drop the debuff there. It will create fire on the ground.
-      </Mechanic>
-      <Mechanic title="Draw Flames - Don't stand in it">
-        Every **30 seconds**, he draws the flame patches on the ground towards him. Melees don't stand between boss and flames. <br/>
-        One he soaks the flames, he does AoE damage every **3 seconds**. <br/>
-        The second time he uses **Draw Flames** - maintank uses **Nullification Barrier** to snuff out the fire before it reaches him.
-      </Mechanic>
-    </Phase>
-  </Section>
+    <Mechanic title="Burn him">
+      Use your cooldowns and kill him. Tanks rotate cooldowns here to reduce damage taken, so **Voodoo Doll** targets survives.
+    </Mechanic>
+  </Phase>
 </Section>
