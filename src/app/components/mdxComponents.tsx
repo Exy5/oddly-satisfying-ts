@@ -18,7 +18,7 @@ export const components: MDXComponents = {
   Spell,
   TableOfContents,
   Title,
-  h1: (props) => <h1 className="text-3xl font-bold my-6" {...props} />,
-  h2: (props) => <h2 className="text-2xl font-semibold my-4" {...props} />,
-  p: (props) => <p className="mb-4" {...props} />,
+  h1: (props) => <h1 {...props} />,
+  h2: (props) => <h2 {...props} />,
+  p: (props) =>  <p  {...props} />,
 };

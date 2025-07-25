@@ -1,5 +1,7 @@
 "use client";
 
+const DISCORD_LINK = "https://discord.gg/wdxuPkkpBw"
+
 import Image from "next/image";
 import { 
   HeaderMainContentStyle,
@@ -33,7 +35,7 @@ const Header = () => {
           <Link className={HeaderMenuItemStyle} href="/guides">GUIDES</Link>
           <Link className={HeaderMenuItemStyle} href="/about">ABOUT US</Link>
         </div>
-        <a href="https://discord.gg/9aWhDBRBYS" target="_blank" className={discordLinkStyle}>
+        <a href={DISCORD_LINK} target="_blank" className={discordLinkStyle}>
           <Image src="/images/discord-symbol-white.png" alt="discord" className={discordLogoStyle} width={32} height={32} />
         </a>
       </div>
