@@ -1,0 +1,74 @@
+<Title>Elegon</Title>
+
+<TableOfContents title="Table of Contents" sections={[
+  { id: 'intro', title: 'Introduction' },
+  { id: 'video', title: 'Video Guide' },
+  { id: 'strategy', title: 'Strategy' },
+]} />
+
+<Section id="intro" title="Introduction">
+ Elegon is the fifth boss in Mogu'shan Vaults. He consists of 3 different phases, that will cycle all the time.
+</Section>
+
+<Section id="video" title="Video Guide">
+  This will basically be the strategy we are opting for.
+  <VideoEmbed url="https://www.youtube.com/embed/Fv1PTxqoq9M?si=8i1hVi9ZYVXZXZN5" />
+</Section>
+
+<Section id="strategy" title="Strategy">
+  <Section title="Phase 1 - till 85%, 50%">
+    <Phase title="Important Spells">
+      <SpellContainer>
+        <Spell title="Touch of the Titans" image="/images/mogushan-vaults/elegon/touch-of-the-titans.png">
+          Gain 50% damage and healing received. Also applies **Overcharged**, which increases your damage taken by 5%, stacking every 3 seconds.
+        </Spell>
+        <Spell title="Celestial Breath" image="/images/mogushan-vaults/elegon/celestial-breath.png">
+          Breath on the tank. **Face him out of the raid**.
+        </Spell>
+        <Spell title="Total Annihilation" image="/images/mogushan-vaults/elegon/total-annihilation.png">
+          Deals 500k dmg to the everyone **in line of sight**. Let it explode on the floor off the glass. <br/>
+          **In Heroic 3 people need to soak the damage**.
+        </Spell>
+      </SpellContainer>
+   	</Phase>
+    <Phase title="Walkthrough">
+      It's only a couple of mechanics to watch out for.
+      <Mechanic title="Stand on glass, reset stacks around every 10 stacks.">
+        Stand on the corner of the glass, so you need to do **minimal movement** to reset the stacks. <br/>
+        Classes with defensive cooldowns can get more stacks for a better uptime.
+      </Mechanic>
+      <Mechanic title="Focus Adds whenever they are alive">
+        Focus the add. Also applies healing debuff, which should be **Mass Dispelled**. On reaching **25% health**, it does raid wide damage. <br/>
+        When it dies, casts **Total Annihilation**, which deals 500k raid damage to anybody in line of sight. <br/>
+        Tank has to pull it off the glass, while the raid stands on the glass. <br/>
+        **Furthermore, 3 people need to soak this spell, or the raid gets wiped in heroic mode.** After the explosion, the soakers need to be healed over 80%. <br/>
+        Lastly, after soaking you get a debuff, so you can't soak again instantly. 2 Soak groups are required.
+      </Mechanic>
+    </Phase>
+  </Section>
+
+  <Section title="Phase 2 - kill Adds before they reach the generators">
+    <Phase title="Walkthrough">
+      <Mechanic title="Kill adds and damage boss">
+        Kill all the adds, before they reach the generators on the edge of the glass. Next phase will start, once an add touches the generators. <br/>
+        When the adds are down, damage the boss. The adds will spawn faster over time.<br/>
+        Goal is to kill 6 waves, on the 7th we focus the boss instead for some more uptime.
+      </Mechanic>
+    </Phase>
+  </Section>
+
+  <Section title="Phase 3 - Kill the generators">
+    When Phase 3 starts, he will get rid of the glass in the room. If that happens, the raid will split up onto the opposite sides of the room. <br/>
+    Then you need to kill the generators.
+    <Phase title="Walkthrough">
+      After Phase 3 is done, the cycle will repeat again and we're back to Phase 1. 
+      <Mechanic title="Dodge blue circles on the ground">
+        Dodge them, or you will get oneshot. Furthermore they will spawn adds.
+      </Mechanic>
+      <Mechanic title="Cleave adds">
+        Tanks pick those adds up, and cleave them next to the generators. Don't focus too much on those, but **prioritize the generators**. <br/>
+        The adds will be cleaved down when we're back to Phase 1 anyways.
+      </Mechanic>
+    </Phase>
+  </Section>
+</Section>
