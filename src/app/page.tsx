@@ -16,10 +16,9 @@ export default function Home() {
           height={160}
           priority
         />
-        <ul>
-          <p>This is the Oddly Satisfying Guide Homepage.</p>
-          <p>If you want to join a dorky adventure, check out our discord.</p>
-        </ul>
+        <ol>
+          <p>This is the Oddly Satisfying Guides Homepage.</p>
+        </ol>
       </main>
     </div>
   );
