@@ -33,7 +33,7 @@ const Header = () => {
         <div className={HeaderMenuStyle}>
           <Link className={HeaderMenuItemStyle} href="/">HOME</Link>
           <Link className={HeaderMenuItemStyle} href="/guides">GUIDES</Link>
-          <Link className={HeaderMenuItemStyle} href="/about">ABOUT US</Link>
+          {/*<Link className={HeaderMenuItemStyle} href="/about">ABOUT US</Link>*/}
         </div>
         <a href={DISCORD_LINK} target="_blank" className={discordLinkStyle}>
           <Image src="/images/discord-symbol-white.png" alt="discord" className={discordLogoStyle} width={32} height={32} />
